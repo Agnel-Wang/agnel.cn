@@ -58,3 +58,10 @@ docker run --rm --privileged docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08da
 sudo docker pull arm64v8/ubuntu:20.04
 sudo docker run -it arm64v8/ubuntu:20.04
 ```
+
+## 将自己的镜像给别人使用
+
+```bash
+docker image save ubuntu:20.04 > ubuntu_save
+docker image load < ubuntu_save
+```

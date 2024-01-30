@@ -79,13 +79,14 @@ features:
   comment:
      # Choose a provider: giscus, disqus, commento, or '' to disable commenting
     provider: ''
+    # provider: 'giscus'
     disqus:
       shortname: ''
       show_count: true
     commento:
       url: ''
     giscus:
-      repo: ''
+      repo: 'https://github.com/Agnel-Wang/agnel.cn.git'
       repo_id: ''
       category: ''
       category_id: ''
