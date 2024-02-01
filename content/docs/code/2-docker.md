@@ -2,7 +2,6 @@
 title: Docker
 linktitle: Docker
 type: book
-data: 2023.11.1
 weight: 2
 ---
 

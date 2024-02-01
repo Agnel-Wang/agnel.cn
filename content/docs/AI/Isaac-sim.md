@@ -2,7 +2,6 @@
 title: Isaac-sim
 linktitle: Isaac-sim
 type: book
-data: 2023.10.31
 weight: 1
 ---
 

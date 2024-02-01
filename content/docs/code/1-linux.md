@@ -2,7 +2,6 @@
 title: Linux
 linktitle: Linux
 type: book
-data: 2023.10.31
 weight: 1
 ---
 

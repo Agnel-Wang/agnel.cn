@@ -2,7 +2,6 @@
 title: Voice
 linktitle: Voice
 type: book
-data: 2023.10.31
 weight: 2
 ---
 

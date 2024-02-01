@@ -2,7 +2,6 @@
 title: ROS
 linktitle: ROS
 type: book
-data: 2023.11.1
 weight: 3
 ---
 
