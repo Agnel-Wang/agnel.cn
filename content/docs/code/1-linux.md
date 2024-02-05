@@ -135,3 +135,11 @@ sudo swapoff sfile
 ### Software
 
 + kazam 录屏
+
+### debug
+
+```bash
+# 查看当前文件夹下的占用空间
+du -ah --max-depth=1 
+```
+
