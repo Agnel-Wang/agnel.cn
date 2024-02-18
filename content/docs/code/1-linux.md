@@ -140,6 +140,8 @@ sudo swapoff sfile
 
 ```bash
 # 查看当前文件夹下的占用空间
-du -ah --max-depth=1 
+du -sh *
+# 包括隐藏文件
+du -sh .[^.]* *
 ```
 
