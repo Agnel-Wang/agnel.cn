@@ -5,6 +5,11 @@ type: book
 weight: 4
 ---
 
+一键安装
+```bash
+wget http://fishros.com/install -O fishros && . fishros
+```
+
 #### DDS 配置
 
 ```bash
