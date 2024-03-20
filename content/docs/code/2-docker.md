@@ -64,3 +64,30 @@ sudo docker run -it arm64v8/ubuntu:20.04
 docker image save ubuntu:20.04 > ubuntu_save
 docker image load < ubuntu_save
 ```
+
+## 添加普通用户
+
+```bash
+apt intsall sudo
+sudo adduser unitree
+usermode -aG sudo unitree
+chown root:root /usr/bin/sudo
+chmod 4755 /usr/bin/sudo
+```
+
+## 将本地container变为image并上传到docker-hub
+
+```bash
+# login docker hub
+docker login 
+
+# change container to image
+docker commit my_container my_new_image:v1
+
+# tag your image
+# example: docker tag myapp:latest john/myapp:v1
+docker tag local-image:tagname username/repository:tagname
+
+# push image
+docker push username/repository:tagname
+```
