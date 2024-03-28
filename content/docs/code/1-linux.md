@@ -145,3 +145,8 @@ du -sh *
 du -sh .[^.]* *
 ```
 
+### Compile
+
+```
+strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
+```

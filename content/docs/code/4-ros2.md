@@ -23,3 +23,11 @@ network interface
 ```bash
 export CYCLONEDDS_URI="<CycloneDDS><Domain><General><NetworkInterfaceAddress>192.168.123.234</NetworkInterfaceAddress></General></Domain></CycloneDDS>"
 ```
+
+#### ROS2设置cyclonedds中间件
+
+```bash
+sudo apt install ros-foxy-rmw-cyclonedds-cpp
+#bashrc
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+```
