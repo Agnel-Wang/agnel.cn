@@ -45,6 +45,15 @@ docker cp /path/to/your/code my-ubuntu:/root #放入代码
 docker cp my-ubuntu:/root/my_program /path/on/host # 拷回主机
 ```
 
+- 无sudo启动docker
+
+```bash
+# 将当前用户添加到docker用户组
+sudo usermod -aG docker $USER
+# 显示所属用户组列表，确保docker用户组在其中
+groups
+```
+
 ## 在X86架构上安装arm64镜像
 
 ```bash
