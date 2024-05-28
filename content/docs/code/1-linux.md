@@ -122,6 +122,28 @@ sudo chown $USER:$USER /dev/ttyUSB0
 + cutecom
 + minicom
 
+#### 设备绑定
+
+```bash
+# 创建规则文件
+sudo vim /etc/udev/rules.d/usb-serial.rules
+# 查看待绑定设备信息
+udevadm info -a /dev/ttyUSB0
+```
+
+```sh
+# 1. 根据设备USB芯片编号绑定
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SUBSYSTEM=="tty", KERNEL=="ttyUSB*", MODE="0666", SYMLINK+="usb-serial-xxx"
+# 简洁版
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", KERNEL=="ttyUSB*", MODE="0666", SYMLINK+="usb-serial-xxx"
+# 2. 根据电脑USB端口编号绑定
+SUBSYSTEMS=="usb", KERNELS=="1-2:1.0", SUBSYSTEM=="tty", KERNEL=="ttyUSB*", MODE="0666", SYMLINK+="usb-serial-xxx"
+# 简洁版
+KERNELS=="1-2:1.0", KERNEL=="ttyUSB*", MODE="0666", SYMLINK+="usb-serial-xxx"
+# 3. 立即生效
+sudo udevadm control --reload-rules && sudo service udev restart && sudo udevadm trigger
+```
+
 ### Swap space
 
 ```bash
