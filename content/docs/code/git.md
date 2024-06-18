@@ -10,6 +10,11 @@ weight: 10
 用于同时有gitlab和github的情况
 
 ①生成rsa key并添加到github和gitlab的设置中
+
+```bash
+ssh-keygen -t rsa -C "your@email.com"
+```
+
 ②配置 `~/.ssh/config`
 ```bash
 # 以github举例
@@ -18,6 +23,7 @@ Host github
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa_github
     User git
+    #Port 6022
 ```
 
 ③检测是否配置成功
