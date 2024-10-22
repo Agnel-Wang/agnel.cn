@@ -108,6 +108,10 @@ export http_proxy=http://10.0.5.125:7890
 export https_proxy=http://10.0.5.125:7890
 ```
 
+网段有网固定IP无法联网，需配置网格
+```bash
+sudo ip route add default via 192.168.123.1 dev eth0
+```
 ### Serial
 
 ubuntu打开串口需要sudo权限
